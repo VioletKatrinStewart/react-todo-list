@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { getUser, logout } from './services/users';
 import Auth from './views/Auth';
 import ToDos from './views/ToDos';
+import Tasks from './views/Tasks';
 
 function App() {
   const [currentUser, setCurrentUser] = useState(getUser());
@@ -18,6 +19,7 @@ function App() {
             {currentUser && (
               <>
                 <ToDos></ToDos>
+                <Tasks></Tasks>
                 <button onClick={logoutUser}>sign out</button>
               </>
             )}

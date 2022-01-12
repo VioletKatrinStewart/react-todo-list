@@ -9,9 +9,9 @@ export default function ToDos() {
   async function handleSave(e) {
     try {
       e.preventDefault();
-      const add = { task: task };
-      await createToDo(add);
+      await createToDo(task);
       setMessage('Task has been added');
+      alert(message);
     } catch {
       setMessage('Something went wrong');
     }
